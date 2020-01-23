@@ -1,0 +1,67 @@
+﻿<Window x:Class="Login.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="600" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent" MouseDown="Window_MouseDown">
+    <Grid>
+        <Rectangle RadiusX="8" RadiusY="8" Fill="White"/>
+        <Image Source="H:\Мои проекты\C# .NET Framework\Windows Presentation Foundation.NET Framework\Login\Login\Resources\welcome.jpeg" Margin="310 0 0 0" Stretch="UniformToFill"/>
+        <Rectangle Margin="310 0 0 0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#cc935e12" Offset="1"/>
+                    <GradientStop Color="#ccea4646"/>
+                    <GradientStop Color="#ccb89128" Offset="0.566"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <StackPanel Margin="20 10 290 10">
+            <Label Content="Login" FontFamily="Segoe UI Black" FontSize="24" Margin="0 10" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#707070"><Run Text="No Account?"></Run></TextBlock>
+                <TextBlock Margin="5 0" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#ff2468ac"><Run Text="Create new Account"></Run></TextBlock>
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#707070"><Run Text="It takes at least one minute"></Run></TextBlock>
+            <StackPanel Margin="0 15" Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
+                <TextBox materialDesign:HintAssist.Hint="Username" Width="250" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Foreground="#707070"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Password" Width="250" Margin="5"/>
+            </StackPanel>
+            <Grid>
+                <CheckBox Content="remember this entry" Margin="5 10" Foreground="#707070"/>
+                <Label Content="Forgot your password" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Foreground="#707070"/>
+            </Grid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="buttonCancel" HorizontalAlignment="Center" Content="Cancel" FontFamily="impact" FontSize="18" Background="#ff307cd6" BorderBrush="#ff307cd6" Margin="5 0" Click="buttonCancel_Click"/>
+                <Button HorizontalAlignment="Center" Content="Login" FontFamily="impact" FontSize="18" Background="#ff307cd6" BorderBrush="#ff307cd6" Margin="5 0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10 35">
+                <Label Content="Or come in with" Foreground="#707070" VerticalAlignment="Center" Margin="5 0"/>
+                <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#ff3d56ac" BorderBrush="#ff3d56ac" Margin="5 0">
+                    <materialDesign:PackIcon Kind="Facebook" VerticalAlignment="Center" Foreground="White"/>
+                </Button>
+                <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#ff3d56ac" BorderBrush="#ff3d56ac">
+                    <materialDesign:PackIcon Kind="Twitter" VerticalAlignment="Center" Foreground="White" />
+                </Button>
+                <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#ff3d56ac" BorderBrush="#ff3d56ac" Margin="5 0 ">
+                    <materialDesign:PackIcon Kind="Vk" HorizontalAlignment="Center" Foreground="White"/>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="310 50 0 50">
+            <TextBlock Text="Abdulkhakim" Foreground="White" HorizontalAlignment="Center" FontSize="40" FontFamily="Champagne &amp; Limousines" FontWeight="Bold"/>
+            <TextBlock Text="Base Security" Foreground="White" HorizontalAlignment="Center" Width="280" FontSize="24" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="0,50,0,0"/>
+            <TextBlock Text="Evil corporation" Foreground="White" FontSize="18" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Right" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
